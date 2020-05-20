@@ -458,13 +458,13 @@ cell_t ffFindNFA( const ForthString *WordName, const ForthString **NFAPtr )
     WordChar = WordName+1;
 
     NameField = (ForthString *) gVarContext;
-DBUG(("\nffFindNFA: WordLen = %d, WordName = %*s\n", WordLen, WordLen, WordChar ));
+DBUG(("\nffFindNFA: WordLen = %d, WordName = %s\n", WordLen, WordChar ));
 DBUG(("\nffFindNFA: gVarContext = 0x%x\n", gVarContext));
     do
     {
         NameLen = (uint8_t) ((ucell_t)(*NameField) & MASK_NAME_SIZE);
         NameChar = NameField+1;
-/* DBUG(("   %c\n", (*NameField & FLAG_SMUDGE) ? 'S' : 'V' )); */
+ DBUG(("   %c\n", (*NameField & FLAG_SMUDGE) ? 'S' : 'V' ));
         if( ((*NameField & FLAG_SMUDGE) == 0) &&
             (NameLen == WordLen) &&
             ffCompareTextCaseN( NameChar, WordChar, WordLen ) ) /* FIXME - slow */

@@ -11,3 +11,9 @@ fth/fatest1.txt
 fth/pforth.dic
 **/.DS_Store
 
+build/aarch64-rpi3/*.eo
+build/aarch64-rpi3/*.o
+build/aarch64-rpi3/pfdicdat.h
+build/aarch64-rpi3/pforth
+build/aarch64-rpi3/pforth.dic
+build/aarch64-rpi3/pforth_standalone.elf

@@ -39,7 +39,7 @@
 #endif
 
 #ifdef PF_STATIC_DIC
-    #include "pfdicdat.h"
+    #include "pfdicdat_arm.h"
 #endif
 
 /*
